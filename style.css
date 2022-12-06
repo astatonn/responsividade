@@ -1,0 +1,253 @@
+:root {
+    --main-font: 'Roboto', sans-serif;
+    --theme-color: teal;
+    font-family: var(--main-font);
+}
+a:visited, a:link {
+    text-decoration: none;
+    color: black;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+  }
+  
+  body, html {
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  .header-content {
+    width: 100vw;
+    height: 10vh;
+    box-shadow: 1px 1px 4px var(--theme-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header-spacing {
+    padding: 0 15px;
+  }
+  
+  .logo-header {
+    height: 3rem;
+  }
+  
+  .menu-header {
+    height: 2rem;
+    fill: teal;
+  }
+
+  .nav-menu {
+    display: none;
+  }
+  
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .image-main {
+    width: 150px;
+  }
+  
+  .main-left {
+    
+    margin: 0 20px;
+  }
+
+  .main-title {
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: var(--theme-color);
+  }
+
+  .main-text {
+    font-weight: 300;
+    font-size: .6rem;
+  }
+
+  .partners {
+    background-color: var(--theme-color);
+    height: 100%;
+    justify-items: center;
+    display: grid;
+    gap: 1rem;
+    margin: 0 auto;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+  }
+
+  .box:nth-child(1), .box:nth-child(2) {
+   margin-top: 20px;
+  }
+
+  .box {
+    width: 125px;
+    height: 125px;
+    background-color: white;
+    border-radius: 5px;
+  }
+  
+  .contact {
+    height: 80vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  form input {
+    margin-bottom: 1.5rem;
+    margin-top: 1rem;
+    border: none;
+    border-bottom: 2px solid var(--theme-color);
+  }
+
+  textarea {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    outline: none;
+    border: 1px solid var(--theme-color);
+    border-radius: 5px;
+  }
+
+  button {
+    outline: none;
+    background-color: var(--theme-color);
+    border: 1px solid var(--theme-color);
+    color: white;
+    padding: 5px 0;
+    border-radius: 5px;
+  }
+  
+
+  @media screen and (min-width: 375px) {
+    .box {
+        width: 150px;
+        height: 150px ;
+    }
+
+    .image-main {
+        width: 200px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .main-content {
+        flex-direction: row;
+    }
+    
+    .partners {
+        grid-template-columns: repeat(3, 1fr);
+    } 
+
+    .image-main {
+        width: 250px;
+    }
+
+    .main-title {
+        font-size: 2.5rem;
+    }
+
+    .main-text {
+        font-size: 1rem;
+    }
+
+    .menu-header {
+        display: none;
+    }
+
+    .nav-menu {
+        display: flex;
+        justify-content: space-around;
+        width: 50%;
+        
+    }
+
+    form {
+        width: 60%;
+    }
+
+    button {
+        width: 40%;
+        align-self: flex-end;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .nav-menu {
+        font-size: 1.5rem;
+    }
+    
+    .main-title {
+        font-size: 3.5rem;
+    }
+
+    .main-text {
+        font-size: 2rem;
+    }
+
+    .image-main {
+        width: 350px;
+    }
+
+
+    .partners {
+        height: 50vh;
+        display: flex;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        -webkit-overflow-scrolling: touch; /* Faz um rolamento mais suave*/
+        -ms-overflow-style: -ms-autohiding-scrollbar;  /* esconde a barra de rolagem */
+    } 
+
+    .partners::-webkit-scrollbar {
+        display: none;  /* esconde a barra de rolagem */
+    }
+
+    .box:nth-child(1), .box:nth-child(2) {
+        margin-top: 0px;
+    }
+
+    .box:nth-child(1){
+        margin-left: 20px;
+    }
+
+    .box {
+        width: 400px;
+        height: 300px;
+        box-shadow: 1px 1px 5px black; 
+        flex: 0 0 auto;
+    }
+
+    .header-content {
+        height: 15vh;
+    }
+
+    .logo-header {
+        height: 10vh;
+    }
+
+    form {
+        font-size: 1.5rem;
+    }
+
+    button {
+        font-size: 2rem;
+    }
+  }
